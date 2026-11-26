@@ -1,0 +1,11 @@
+name = "office-casting"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://axelgreylark.github.io,http://localhost:8000"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "office-casting"
+database_id = "TO_FILL_AFTER_d1_create"

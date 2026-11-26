@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qui est qui chez Dunder Mifflin</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root {
+  --bg: #e9edf1; --panel: #ffffff; --ink: #1b2430; --muted: #5d6b7b;
+  --line: #cdd5de; --accent: #1f4e8c; --hit: #f2c230;
+  --display: "Archivo Black", "Arial Black", system-ui, sans-serif;
+  --body: "Archivo", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --bg: #121820; --panel: #1b232e; --ink: #e8edf3; --muted: #93a1b2; --line: #2c3746;
+  --accent: #6f9fe0; --hit: #e0b22a; color-scheme: dark } }
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 32px 16px 64px; display: grid; gap: 28px; }
+h1 { font: 2.4rem/1.05 var(--display); margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h2 { font: 1.3rem/1.2 var(--display); margin: 0; }
+.eyebrow { font: 500 .75rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+header p { margin: 8px 0 0; color: var(--muted); max-width: 60ch; }
+.status { font: 500 .8rem var(--mono); color: var(--muted); }
+
+.roster { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.badge { all: unset; cursor: pointer; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: grid; }
+.badge:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.badge[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+.badge .shot { aspect-ratio: 16/9; background: var(--line); display: grid; place-items: center; color: var(--muted); font: 500 .8rem var(--mono); }
+.badge .shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.badge .meta { padding: 10px 12px 12px; display: grid; gap: 2px; }
+.badge .who { font: 1.1rem var(--display); }
+.badge .verdict { font-size: .9rem; color: var(--muted); }
+.badge .verdict b { color: var(--ink); font-weight: 600; }
+
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: grid; gap: 16px; }
+.panel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+button.ghost { font: 500 .8rem var(--mono); background: none; border: 1px solid var(--line); color: var(--muted); border-radius: 6px; padding: 6px 10px; cursor: pointer; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.card { all: unset; cursor: pointer; border-radius: 8px; border: 1px solid var(--line); overflow: hidden; display: grid; background: var(--bg); position: relative; }
+.card:focus-visible { outline: 3px solid var(--hit); outline-offset: 2px; }
+.card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; background: var(--line); }
+.card .cap { padding: 8px 10px 10px; display: grid; gap: 1px; }
+.card .nm { font-weight: 600; }
+.card .job { font-size: .75rem; color: var(--muted); line-height: 1.3; }
+.card .bar { height: 4px; background: var(--line); border-radius: 2px; margin-top: 6px; overflow: hidden; }
+.card .bar i { display: block; height: 100%; background: var(--accent); }
+.card .n { position: absolute; top: 6px; right: 6px; background: var(--panel); color: var(--ink); font: 500 .75rem var(--mono); padding: 2px 7px; border-radius: 99px; font-variant-numeric: tabular-nums; }
+.card.mine { border-color: var(--hit); box-shadow: 0 0 0 3px var(--hit); }
+.card.mine::after { content: "Ton vote"; position: absolute; top: 6px; left: 6px; background: var(--hit); color: #1b2430; font: 500 .7rem var(--mono); padding: 2px 7px; border-radius: 99px; }
+@media (max-width: 480px) { h1 { font-size: 1.8rem } .grid { grid-template-columns: repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Dunder Mifflin Paper Company · Scranton, PA</div>
+    <h1>Qui est qui chez Dunder Mifflin ?</h1>
+    <p>Choisis un collègue, puis vote pour le personnage de <i>The Office</i> qui lui ressemble le plus. Un vote par collègue ; tu peux changer d'avis quand tu veux.</p>
+  </header>
+
+  <section style="display:grid;gap:12px">
+    <div class="panel-head"><h2>L'équipe</h2><span class="status" id="status">Chargement des votes…</span></div>
+    <div class="roster" id="roster"></div>
+  </section>
+
+  <section class="panel" id="panel" hidden>
+    <div class="panel-head">
+      <div><div class="eyebrow">Vote</div><h2 id="panelTitle"></h2></div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span class="status" id="panelCount"></span>
+        <button class="ghost" id="clearVote" type="button" hidden>Retirer mon vote</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+</div>
+
+<script>
+const API = "https://office-casting.TO_FILL.workers.dev";
+
+const PEOPLE = [{ id: "anthony", name: "Anthony" }];
+const CHARS = [
+  ["michael-scott", "Michael Scott", "Regional Manager", "9oF7EAvaFUOEU"],
+  ["dwight-schrute", "Dwight Schrute", "Assistant (to the) Regional Manager", "G5eO2XaXAly5a"],
+  ["jim-halpert", "Jim Halpert", "Sales", "HbjDTy6gfBXMI"],
+  ["pam-beesly", "Pam Beesly", "Réception", "jxtJf3Yd9sMFugR3A0"],
+  ["ryan-howard", "Ryan Howard", "Temp", "nUiHcOsMu7WPm"],
+  ["andy-bernard", "Andy Bernard", "Sales, Cornell", "Y2LBRcUfNMxzqQpwiq"],
+  ["angela-martin", "Angela Martin", "Comptabilité", "OCeyhpNGTxei7SR6mO"],
+  ["kevin-malone", "Kevin Malone", "Comptabilité", "11zU4IDJeg75Sg"],
+  ["oscar-martinez", "Oscar Martinez", "Comptabilité", "KZysJjKb8XyQSXQZwl"],
+  ["stanley-hudson", "Stanley Hudson", "Sales", "TdEjDUJk76OC4"],
+  ["phyllis-vance", "Phyllis Vance", "Sales", "dORP3LpP0y6cLaZTMg"],
+  ["meredith-palmer", "Meredith Palmer", "Supplier Relations", "Zi1xmr4mUJgJblc9UJ"],
+  ["creed-bratton", "Creed Bratton", "Quality Assurance", "10vpNuwf5gpJVC"],
+  ["kelly-kapoor", "Kelly Kapoor", "Customer Service", "IOxeKSBoyhsE8"],
+  ["toby-flenderson", "Toby Flenderson", "Ressources humaines", "cSm6XIFFNfOKmeZ7K4"],
+  ["darryl-philbin", "Darryl Philbin", "Entrepôt", "JWI7KdcD0E17yHJ4zx"],
+  ["erin-hannon", "Erin Hannon", "Réception", "KZptMssRrGnPmxNWjl"],
+].map(([id, name, job, giphy]) => ({ id, name, job, gif: `https://i.giphy.com/media/${giphy}/200w.gif` }));
+const byId = Object.fromEntries(CHARS.map(c => [c.id, c]));
+
+const $ = id => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+// Anonymous per-browser voter id
+let voter;
+try { voter = localStorage.getItem("voter") || crypto.randomUUID(); localStorage.setItem("voter", voter); }
+catch { voter = crypto.randomUUID(); }
+
+let tallies = {}, mine = {};
+let selected = PEOPLE.length === 1 ? PEOPLE[0].id : null;
+
+function render() {
+  const roster = $("roster"); roster.replaceChildren();
+  for (const p of PEOPLE) {
+    const t = tallies[p.id] || {}, total = Object.values(t).reduce((a, b) => a + b, 0);
+    const top = Object.entries(t).sort((a, b) => b[1] - a[1])[0];
+    const b = el("button", "badge"); b.type = "button"; b.setAttribute("aria-pressed", String(p.id === selected));
+    const shot = el("div", "shot");
+    if (top) { const img = el("img"); img.src = byId[top[0]].gif; img.alt = byId[top[0]].name; shot.append(img); }
+    else shot.textContent = "Pas encore de vote";
+    const meta = el("div", "meta"); meta.append(el("div", "who", p.name));
+    const v = el("div", "verdict");
+    if (top) { v.append("C'est ", el("b", null, byId[top[0]].name), ` · ${Math.round(top[1] / total * 100)} % de ${total} vote${total > 1 ? "s" : ""}`); }
+    else v.textContent = "Vote pour lancer le casting";
+    meta.append(v); b.append(shot, meta);
+    b.onclick = () => { selected = selected === p.id ? null : p.id; render(); };
+    roster.append(b);
+  }
+  renderPanel();
+}
+
+function renderPanel() {
+  const p = PEOPLE.find(x => x.id === selected);
+  $("panel").hidden = !p;
+  if (!p) return;
+  const t = tallies[p.id] || {}, total = Object.values(t).reduce((a, b) => a + b, 0);
+  $("panelTitle").textContent = `${p.name}, c'est qui ?`;
+  $("panelCount").textContent = `${total} vote${total > 1 ? "s" : ""}`;
+  $("clearVote").hidden = !mine[p.id];
+  const grid = $("grid"); grid.replaceChildren();
+  const max = Math.max(1, ...Object.values(t));
+  for (const c of CHARS) {
+    const n = t[c.id] || 0;
+    const card = el("button", "card" + (mine[p.id] === c.id ? " mine" : "")); card.type = "button";
+    card.setAttribute("aria-label", `${c.name} (${n} vote${n > 1 ? "s" : ""})`);
+    const img = el("img"); img.src = c.gif; img.alt = ""; img.loading = "lazy";
+    const cap = el("div", "cap"); cap.append(el("span", "nm", c.name), el("span", "job", c.job));
+    const bar = el("div", "bar"), fill = el("i"); fill.style.width = (n / max * 100) + "%"; bar.append(fill); cap.append(bar);
+    card.append(img, cap);
+    if (n) card.append(el("span", "n", n));
+    card.onclick = () => vote(p.id, c.id);
+    grid.append(card);
+  }
+}
+
+async function load() {
+  try {
+    const r = await fetch(`${API}/votes?voter=${voter}`);
+    if (!r.ok) throw 0;
+    ({ tally: tallies, mine } = await r.json());
+    $("status").textContent = "Clique sur une carte pour voter";
+  } catch { $("status").textContent = "Impossible de charger les votes."; }
+  render();
+}
+
+async function vote(person, character) {
+  try {
+    const r = await fetch(`${API}/vote`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ voter, person, character }) });
+    if (!r.ok) throw 0;
+  } catch { $("status").textContent = "Vote non enregistré, réessaie."; return; }
+  load();
+}
+$("clearVote").onclick = () => vote(selected, null);
+
+render();
+load();
+addEventListener("focus", load);
+</script>
+</body>
+</html>
