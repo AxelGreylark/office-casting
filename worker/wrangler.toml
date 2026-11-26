@@ -8,4 +8,4 @@ ALLOWED_ORIGINS = "https://axelgreylark.github.io,http://localhost:8000"
 [[d1_databases]]
 binding = "DB"
 database_name = "office-casting"
-database_id = "TO_FILL_AFTER_d1_create"
+database_id = "e7e41b81-6b7c-4e64-a993-c0dad08aebfb"
