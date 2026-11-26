@@ -1,9 +1,6 @@
-name = "office-casting"
-main = "src/index.js"
+name = "quiestqui"
+pages_build_output_dir = "public"
 compatibility_date = "2026-11-01"
-
-[vars]
-ALLOWED_ORIGINS = "https://axelgreylark.github.io,http://localhost:8000"
 
 [[d1_databases]]
 binding = "DB"
