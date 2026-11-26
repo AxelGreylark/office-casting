@@ -3,6 +3,34 @@
   {
    "id": "anthony",
    "name": "Anthony"
+  },
+  {
+   "id": "anas",
+   "name": "Anas"
+  },
+  {
+   "id": "juliette",
+   "name": "Juliette"
+  },
+  {
+   "id": "ondine",
+   "name": "Ondine"
+  },
+  {
+   "id": "hugo",
+   "name": "Hugo"
+  },
+  {
+   "id": "amelie",
+   "name": "Amélie"
+  },
+  {
+   "id": "isabelle",
+   "name": "Isabelle"
+  },
+  {
+   "id": "shaden",
+   "name": "Shaden"
   }
  ],
  "licences": [
