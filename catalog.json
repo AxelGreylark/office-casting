@@ -1,0 +1,514 @@
+{
+ "people": [
+  {
+   "id": "anthony",
+   "name": "Anthony"
+  }
+ ],
+ "licences": [
+  {
+   "id": "the-office",
+   "name": "The Office",
+   "characters": [
+    {
+     "id": "michael-scott",
+     "name": "Michael Scott",
+     "role": "Regional Manager",
+     "giphy": "9oF7EAvaFUOEU"
+    },
+    {
+     "id": "dwight-schrute",
+     "name": "Dwight Schrute",
+     "role": "Assistant (to the) Regional Manager",
+     "giphy": "G5eO2XaXAly5a"
+    },
+    {
+     "id": "jim-halpert",
+     "name": "Jim Halpert",
+     "role": "Sales",
+     "giphy": "HbjDTy6gfBXMI"
+    },
+    {
+     "id": "pam-beesly",
+     "name": "Pam Beesly",
+     "role": "Réception",
+     "giphy": "jxtJf3Yd9sMFugR3A0"
+    },
+    {
+     "id": "ryan-howard",
+     "name": "Ryan Howard",
+     "role": "Temp",
+     "giphy": "nUiHcOsMu7WPm"
+    },
+    {
+     "id": "andy-bernard",
+     "name": "Andy Bernard",
+     "role": "Sales, Cornell",
+     "giphy": "Y2LBRcUfNMxzqQpwiq"
+    },
+    {
+     "id": "angela-martin",
+     "name": "Angela Martin",
+     "role": "Comptabilité",
+     "giphy": "OCeyhpNGTxei7SR6mO"
+    },
+    {
+     "id": "kevin-malone",
+     "name": "Kevin Malone",
+     "role": "Comptabilité",
+     "giphy": "11zU4IDJeg75Sg"
+    },
+    {
+     "id": "oscar-martinez",
+     "name": "Oscar Martinez",
+     "role": "Comptabilité",
+     "giphy": "KZysJjKb8XyQSXQZwl"
+    },
+    {
+     "id": "stanley-hudson",
+     "name": "Stanley Hudson",
+     "role": "Sales",
+     "giphy": "TdEjDUJk76OC4"
+    },
+    {
+     "id": "phyllis-vance",
+     "name": "Phyllis Vance",
+     "role": "Sales",
+     "giphy": "dORP3LpP0y6cLaZTMg"
+    },
+    {
+     "id": "meredith-palmer",
+     "name": "Meredith Palmer",
+     "role": "Supplier Relations",
+     "giphy": "Zi1xmr4mUJgJblc9UJ"
+    },
+    {
+     "id": "creed-bratton",
+     "name": "Creed Bratton",
+     "role": "Quality Assurance",
+     "giphy": "10vpNuwf5gpJVC"
+    },
+    {
+     "id": "kelly-kapoor",
+     "name": "Kelly Kapoor",
+     "role": "Customer Service",
+     "giphy": "IOxeKSBoyhsE8"
+    },
+    {
+     "id": "toby-flenderson",
+     "name": "Toby Flenderson",
+     "role": "Ressources humaines",
+     "giphy": "cSm6XIFFNfOKmeZ7K4"
+    },
+    {
+     "id": "darryl-philbin",
+     "name": "Darryl Philbin",
+     "role": "Entrepôt",
+     "giphy": "JWI7KdcD0E17yHJ4zx"
+    },
+    {
+     "id": "erin-hannon",
+     "name": "Erin Hannon",
+     "role": "Réception",
+     "giphy": "KZptMssRrGnPmxNWjl"
+    }
+   ]
+  },
+  {
+   "id": "friends",
+   "name": "Friends",
+   "characters": [
+    {
+     "id": "rachel-green",
+     "name": "Rachel Green",
+     "role": "Central Perk, puis la mode",
+     "giphy": "lz4E907ZZdNqxd3BCs"
+    },
+    {
+     "id": "monica-geller",
+     "name": "Monica Geller",
+     "role": "Cheffe, maniaque du rangement",
+     "giphy": "VJqNoJWP3A7tZZBMk7"
+    },
+    {
+     "id": "phoebe-buffay",
+     "name": "Phoebe Buffay",
+     "role": "Masseuse, Smelly Cat",
+     "giphy": "na1331VdypYU8"
+    },
+    {
+     "id": "joey-tribbiani",
+     "name": "Joey Tribbiani",
+     "role": "Acteur, How you doin'?",
+     "giphy": "zd9wcDX4H4z4I"
+    },
+    {
+     "id": "chandler-bing",
+     "name": "Chandler Bing",
+     "role": "Statistical analysis and data reconfiguration",
+     "giphy": "amkS2AoPLAGg8"
+    },
+    {
+     "id": "ross-geller",
+     "name": "Ross Geller",
+     "role": "Paléontologue, We were on a break",
+     "giphy": "OhFhTe7GJCsTu"
+    },
+    {
+     "id": "gunther",
+     "name": "Gunther",
+     "role": "Serveur à Central Perk",
+     "giphy": "UpELR1XWDJHSj4VYnQ"
+    },
+    {
+     "id": "janice",
+     "name": "Janice",
+     "role": "Oh. My. God.",
+     "giphy": "ol3G1jmfuFCI8"
+    }
+   ]
+  },
+  {
+   "id": "harry-potter",
+   "name": "Harry Potter",
+   "characters": [
+    {
+     "id": "harry-potter",
+     "name": "Harry Potter",
+     "role": "Le survivant",
+     "giphy": "5uo7JY7p7rpPa"
+    },
+    {
+     "id": "hermione-granger",
+     "name": "Hermione Granger",
+     "role": "Gryffondor, première de la classe",
+     "giphy": "iIqcyjsrIhxK0"
+    },
+    {
+     "id": "ron-weasley",
+     "name": "Ron Weasley",
+     "role": "Gryffondor, meilleur ami",
+     "giphy": "pvZZkPMdAA1kA"
+    },
+    {
+     "id": "albus-dumbledore",
+     "name": "Albus Dumbledore",
+     "role": "Directeur de Poudlard",
+     "giphy": "oydIov5VxxXcG0mu1P"
+    },
+    {
+     "id": "severus-snape",
+     "name": "Severus Rogue",
+     "role": "Maître des potions",
+     "giphy": "TGLLaCKWwxUVq"
+    },
+    {
+     "id": "rubeus-hagrid",
+     "name": "Rubeus Hagrid",
+     "role": "Garde-chasse",
+     "giphy": "IIY3iOGa15ZOKiMiKg"
+    },
+    {
+     "id": "minerva-mcgonagall",
+     "name": "Minerva McGonagall",
+     "role": "Directrice de Gryffondor",
+     "giphy": "XsesspPw21oOI"
+    },
+    {
+     "id": "draco-malfoy",
+     "name": "Drago Malefoy",
+     "role": "Serpentard",
+     "giphy": "ygx8EYsdRkNpu"
+    },
+    {
+     "id": "luna-lovegood",
+     "name": "Luna Lovegood",
+     "role": "Serdaigle",
+     "giphy": "10UJquJMEEgRvG"
+    },
+    {
+     "id": "neville-longbottom",
+     "name": "Neville Londubat",
+     "role": "Gryffondor, botanique",
+     "giphy": "13LdqExgczUgCs"
+    },
+    {
+     "id": "dobby",
+     "name": "Dobby",
+     "role": "Elfe libre",
+     "giphy": "wUrc9zZpRhRrW"
+    },
+    {
+     "id": "voldemort",
+     "name": "Voldemort",
+     "role": "Celui-dont-on-ne-doit-pas-prononcer-le-nom",
+     "giphy": "LLxwPAjfpLak8"
+    }
+   ]
+  },
+  {
+   "id": "star-wars",
+   "name": "Star Wars",
+   "characters": [
+    {
+     "id": "luke-skywalker",
+     "name": "Luke Skywalker",
+     "role": "Jedi, fermier de Tatooine",
+     "giphy": "vzX4OAfFKhpzG"
+    },
+    {
+     "id": "leia-organa",
+     "name": "Leia Organa",
+     "role": "Princesse, générale",
+     "giphy": "9zcZ7lTMOHsY"
+    },
+    {
+     "id": "han-solo",
+     "name": "Han Solo",
+     "role": "Contrebandier",
+     "giphy": "rnFSIe404XmOA"
+    },
+    {
+     "id": "chewbacca",
+     "name": "Chewbacca",
+     "role": "Copilote du Faucon",
+     "giphy": "5tRGwBkWx8Vt6"
+    },
+    {
+     "id": "yoda",
+     "name": "Yoda",
+     "role": "Maître Jedi",
+     "giphy": "ZwxpIHk5LutMc"
+    },
+    {
+     "id": "darth-vader",
+     "name": "Dark Vador",
+     "role": "Seigneur Sith",
+     "giphy": "YCIJVm0kcIEak"
+    },
+    {
+     "id": "obi-wan-kenobi",
+     "name": "Obi-Wan Kenobi",
+     "role": "Maître Jedi",
+     "giphy": "KOVlHmbBA09XO"
+    },
+    {
+     "id": "c-3po",
+     "name": "C-3PO",
+     "role": "Droïde de protocole",
+     "giphy": "eJnXPUTnDE7V6"
+    },
+    {
+     "id": "r2-d2",
+     "name": "R2-D2",
+     "role": "Droïde astromécano",
+     "giphy": "bq6F8QYqBU7Yc"
+    },
+    {
+     "id": "palpatine",
+     "name": "Palpatine",
+     "role": "Empereur",
+     "giphy": "kJWYrH269RK8M"
+    },
+    {
+     "id": "jar-jar-binks",
+     "name": "Jar Jar Binks",
+     "role": "Gungan, sénateur",
+     "giphy": "olnuKV0a3Et5C"
+    }
+   ]
+  },
+  {
+   "id": "simpsons",
+   "name": "Les Simpson",
+   "characters": [
+    {
+     "id": "homer-simpson",
+     "name": "Homer Simpson",
+     "role": "Sécurité, centrale nucléaire",
+     "giphy": "jUwpNzg9IcyrK"
+    },
+    {
+     "id": "marge-simpson",
+     "name": "Marge Simpson",
+     "role": "Mère au foyer",
+     "giphy": "11mTYesz11OGxW"
+    },
+    {
+     "id": "bart-simpson",
+     "name": "Bart Simpson",
+     "role": "Ay caramba",
+     "giphy": "l0G17mKNa6XJHYN5m"
+    },
+    {
+     "id": "lisa-simpson",
+     "name": "Lisa Simpson",
+     "role": "Saxophone, 8 ans",
+     "giphy": "3SZPOP5zXILiU"
+    },
+    {
+     "id": "mr-burns",
+     "name": "M. Burns",
+     "role": "Patron de la centrale",
+     "giphy": "8fen5LSZcHQ5O"
+    },
+    {
+     "id": "ned-flanders",
+     "name": "Ned Flanders",
+     "role": "Voisin, Okily dokily",
+     "giphy": "dTpGIZIsIHKEM"
+    },
+    {
+     "id": "moe-szyslak",
+     "name": "Moe Szyslak",
+     "role": "Barman",
+     "giphy": "sREyGcDZAJtYc"
+    },
+    {
+     "id": "apu",
+     "name": "Apu",
+     "role": "Kwik-E-Mart",
+     "giphy": "l2Jed8i3DsdMhDHlC"
+    },
+    {
+     "id": "milhouse",
+     "name": "Milhouse",
+     "role": "Meilleur ami de Bart",
+     "giphy": "s8t6Ym0zHnLb2"
+    },
+    {
+     "id": "ralph-wiggum",
+     "name": "Ralph Wiggum",
+     "role": "I'm learnding",
+     "giphy": "tzhKhNcR2iwRW"
+    },
+    {
+     "id": "krusty",
+     "name": "Krusty le clown",
+     "role": "Animateur télé",
+     "giphy": "3orifbQAP6pjBWQ9dm"
+    }
+   ]
+  },
+  {
+   "id": "brooklyn-99",
+   "name": "Brooklyn Nine-Nine",
+   "characters": [
+    {
+     "id": "jake-peralta",
+     "name": "Jake Peralta",
+     "role": "Inspecteur, Cool cool cool",
+     "giphy": "XAdbHJywVjF5K"
+    },
+    {
+     "id": "amy-santiago",
+     "name": "Amy Santiago",
+     "role": "Inspectrice, classeurs",
+     "giphy": "1Y0qVVerlyJCU"
+    },
+    {
+     "id": "rosa-diaz",
+     "name": "Rosa Diaz",
+     "role": "Inspectrice",
+     "giphy": "nWeZTrDBI75QI"
+    },
+    {
+     "id": "terry-jeffords",
+     "name": "Terry Jeffords",
+     "role": "Sergent, Terry loves yogurt",
+     "giphy": "yoJC2Kvz5mipkBYeHK"
+    },
+    {
+     "id": "raymond-holt",
+     "name": "Raymond Holt",
+     "role": "Capitaine",
+     "giphy": "gYy7U2P0jJst2"
+    },
+    {
+     "id": "charles-boyle",
+     "name": "Charles Boyle",
+     "role": "Inspecteur, gourmet",
+     "giphy": "XbDV3SsE1619WvMKFc"
+    },
+    {
+     "id": "gina-linetti",
+     "name": "Gina Linetti",
+     "role": "Assistante civile",
+     "giphy": "xgNoVPc0Y1oXu"
+    },
+    {
+     "id": "hitchcock-scully",
+     "name": "Hitchcock et Scully",
+     "role": "Inspecteurs, en théorie",
+     "giphy": "dmZ8yrwKb3ePpzQmpd"
+    }
+   ]
+  },
+  {
+   "id": "game-of-thrones",
+   "name": "Game of Thrones",
+   "characters": [
+    {
+     "id": "jon-snow",
+     "name": "Jon Snow",
+     "role": "Garde de Nuit",
+     "giphy": "3og0IHyZMxZNkNOWT6"
+    },
+    {
+     "id": "daenerys",
+     "name": "Daenerys Targaryen",
+     "role": "Mère des dragons",
+     "giphy": "xZ28NIXqN5tnTFfLKR"
+    },
+    {
+     "id": "tyrion",
+     "name": "Tyrion Lannister",
+     "role": "Main de la Reine",
+     "giphy": "dsHZLWYu5SC6k"
+    },
+    {
+     "id": "cersei",
+     "name": "Cersei Lannister",
+     "role": "Reine",
+     "giphy": "XukORs5yMW0Ao"
+    },
+    {
+     "id": "arya",
+     "name": "Arya Stark",
+     "role": "Personne",
+     "giphy": "FVaWjtkT6eMb6"
+    },
+    {
+     "id": "sansa",
+     "name": "Sansa Stark",
+     "role": "Dame de Winterfell",
+     "giphy": "3ohzdSMI3A7geo8N9e"
+    },
+    {
+     "id": "jaime",
+     "name": "Jaime Lannister",
+     "role": "Régicide",
+     "giphy": "l2Jefbn6UpbfXvHpK"
+    },
+    {
+     "id": "ned-stark",
+     "name": "Ned Stark",
+     "role": "Seigneur de Winterfell",
+     "giphy": "oxLsWbH1rvy2A"
+    },
+    {
+     "id": "hodor",
+     "name": "Hodor",
+     "role": "Hodor",
+     "giphy": "UWEhBZGUisL8k"
+    },
+    {
+     "id": "joffrey",
+     "name": "Joffrey Baratheon",
+     "role": "Roi",
+     "giphy": "5fBH6zb8Y4QvMIscQIE"
+    }
+   ]
+  }
+ ]
+}
