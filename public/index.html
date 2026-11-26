@@ -39,10 +39,10 @@ section { display: grid; gap: 12px; }
 .lic:focus-visible, .badge:focus-visible { outline: 3px solid var(--hit); outline-offset: 2px; }
 
 .roster { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
-.badge { all: unset; cursor: pointer; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: grid; }
+.badge { all: unset; cursor: pointer; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr); }
 .badge[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
-.badge .shot { aspect-ratio: 16/9; background: var(--line); display: grid; place-items: center; color: var(--muted); font: 500 .8rem var(--mono); }
-.badge .shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.badge .shot { aspect-ratio: 16/9; position: relative; overflow: hidden; background: var(--line); display: grid; place-items: center; color: var(--muted); font: 500 .8rem var(--mono); }
+.badge .shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .badge .meta { padding: 10px 12px 12px; display: grid; gap: 2px; }
 .badge .who { font: 1.1rem var(--display); }
 .badge .verdict { font-size: .9rem; color: var(--muted); }
@@ -52,7 +52,7 @@ section { display: grid; gap: 12px; }
 .panel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
 button.ghost { font: 500 .8rem var(--mono); background: none; border: 1px solid var(--line); color: var(--muted); border-radius: 6px; padding: 6px 10px; cursor: pointer; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
-.card { all: unset; cursor: pointer; border-radius: 8px; border: 1px solid var(--line); overflow: hidden; display: grid; background: var(--bg); position: relative; }
+.card { all: unset; cursor: pointer; border-radius: 8px; border: 1px solid var(--line); overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr); background: var(--bg); position: relative; }
 .card:focus-visible { outline: 3px solid var(--hit); outline-offset: 2px; }
 .card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; background: var(--line); }
 .card .cap { padding: 8px 10px 10px; display: grid; gap: 1px; }
